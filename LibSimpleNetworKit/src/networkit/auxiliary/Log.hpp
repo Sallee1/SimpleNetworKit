@@ -3,7 +3,6 @@
 
 #include <sstream>
 #include <string>
-#include <string_view>
 
 #include <networkit/auxiliary/StringBuilder.hpp>
 
@@ -50,70 +49,70 @@
 #endif // defined(NETWORKIT_RELEASE_LOGGING)
 
 namespace Aux {
-namespace Log {
+  namespace Log {
 
-struct Location {
-    const char *file;
-    const char *function;
-    const int line;
-};
+    struct Location {
+      const char* file;
+      const char* function;
+      const int line;
+    };
 
-enum class LogLevel {
-    TRACE,
-    DEBUG,
-    INFO,
-    WARN,
-    ERROR,
-    FATAL,
-    QUIET,         // Emits no log messages at all.
-    trace = TRACE, // this + following added for backwards compatibility
-    debug = DEBUG,
-    info = INFO,
-    warn = WARN,
-    error = ERROR,
-    fatal = FATAL,
-    quiet = QUIET
-};
+    enum class LogLevel {
+      TRACE,
+      DEBUG,
+      INFO,
+      WARN,
+      ERROR,
+      FATAL,
+      QUIET,         // Emits no log messages at all.
+      trace = TRACE, // this + following added for backwards compatibility
+      debug = DEBUG,
+      info = INFO,
+      warn = WARN,
+      error = ERROR,
+      fatal = FATAL,
+      quiet = QUIET
+    };
 
-/**
- * Accept loglevel as string and set.
- * @param logLevel as string
- */
-void setLogLevel(const std::string& logLevel);
+    /**
+     * Accept loglevel as string and set.
+     * @param logLevel as string
+     */
+    void setLogLevel(const std::string& logLevel);
 
-/**
- * @return current loglevel as string
- */
-std::string getLogLevel();
+    /**
+     * @return current loglevel as string
+     */
+    std::string getLogLevel();
 
-namespace Impl {
-void log(const Location &loc, LogLevel p, const std::string& msg);
-} // namespace Impl
+    namespace Impl {
+      void log(const Location& loc, LogLevel p, const std::string& msg);
+    } // namespace Impl
 
-///! Returns true iff logging at the provided level is currently activated
-bool isLogLevelEnabled(LogLevel p) noexcept;
+    ///! Returns true iff logging at the provided level is currently activated
+    bool isLogLevelEnabled(LogLevel p) noexcept;
 
-template <typename... T>
-void log(const Location &loc, LogLevel p, const T &...args) {
-    if (!isLogLevelEnabled(p))
+    template <typename... T>
+    void log(const Location& loc, LogLevel p, const T &...args) {
+      if (!isLogLevelEnabled(p))
         return;
 
-    std::stringstream stream;
-    printToStream(stream, args...);
-    Impl::log(loc, p, stream.str());
-}
+      std::stringstream stream;
+      printToStream(stream, args...);
+      Impl::log(loc, p, stream.str());
+    }
 
-template <typename... T>
-void logF(const Location &loc, LogLevel p, const std::string& format, const T &...args) {
-    if (!isLogLevelEnabled(p))
+    template <typename... T>
+    void logF(const Location& loc, LogLevel p, const std::string& format, const T &...args) {
+      if (!isLogLevelEnabled(p))
         return;
 
-    std::stringstream stream;
-    printToStreamF(stream, format, args...);
-    Impl::log(loc, p, stream.str());
-}
+      std::stringstream stream;
+      printToStreamF(stream, format, args...);
+      Impl::log(loc, p, stream.str());
+    }
 
-} // namespace Log
+  } // namespace Log
 } // namespace Aux
 
 #endif // NETWORKIT_AUXILIARY_LOG_HPP_
