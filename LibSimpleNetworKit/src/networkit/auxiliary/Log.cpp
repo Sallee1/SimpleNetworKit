@@ -15,7 +15,7 @@
 namespace Aux {
 namespace Log {
 
-void setLogLevel(std::string_view logLevel) {
+void setLogLevel(const std::string& logLevel) {
     if (logLevel == "TRACE") {
         NetworKit::GlobalState::setLogLevel(LogLevel::TRACE);
     } else if (logLevel == "DEBUG") {
@@ -116,7 +116,7 @@ std::tuple<std::string, std::string> getTerminalFormat(LogLevel p) {
 
 static void logToTerminal(const Location &loc, LogLevel p,
                           const std::chrono::time_point<std::chrono::system_clock> &timePoint,
-                          std::string_view msg) {
+                          const std::string& msg) {
     std::stringstream stream;
 
     if (NetworKit::GlobalState::getPrintTime()) {
@@ -151,7 +151,7 @@ static void logToTerminal(const Location &loc, LogLevel p,
 
 static void logToFile(const Location &loc, LogLevel p,
                       const std::chrono::time_point<std::chrono::system_clock> &timePoint,
-                      std::string_view msg) {
+                      const std::string& msg) {
     if (!NetworKit::GlobalState::getLogFileIsOpen()) {
         return;
     }
@@ -177,7 +177,7 @@ static void logToFile(const Location &loc, LogLevel p,
 
 namespace Impl {
 
-void log(const Location &loc, LogLevel p, std::string_view msg) {
+void log(const Location &loc, LogLevel p, const std::string& msg) {
     auto time = std::chrono::system_clock::now();
 
     logToTerminal(loc, p, time, msg);

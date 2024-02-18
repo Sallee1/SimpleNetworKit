@@ -79,7 +79,7 @@ enum class LogLevel {
  * Accept loglevel as string and set.
  * @param logLevel as string
  */
-void setLogLevel(std::string_view logLevel);
+void setLogLevel(const std::string& logLevel);
 
 /**
  * @return current loglevel as string
@@ -87,7 +87,7 @@ void setLogLevel(std::string_view logLevel);
 std::string getLogLevel();
 
 namespace Impl {
-void log(const Location &loc, LogLevel p, std::string_view msg);
+void log(const Location &loc, LogLevel p, const std::string& msg);
 } // namespace Impl
 
 ///! Returns true iff logging at the provided level is currently activated
@@ -104,7 +104,7 @@ void log(const Location &loc, LogLevel p, const T &...args) {
 }
 
 template <typename... T>
-void logF(const Location &loc, LogLevel p, std::string_view format, const T &...args) {
+void logF(const Location &loc, LogLevel p, const std::string& format, const T &...args) {
     if (!isLogLevelEnabled(p))
         return;
 
