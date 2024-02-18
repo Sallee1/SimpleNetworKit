@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\dllmain.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\networkit\graph\Graph.cpp">
       <Filter>src\networkit\graph</Filter>
     </ClCompile>
@@ -105,9 +102,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\framework.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\networkit\graph\BFS.hpp">
       <Filter>src\networkit\graph</Filter>
     </ClInclude>
