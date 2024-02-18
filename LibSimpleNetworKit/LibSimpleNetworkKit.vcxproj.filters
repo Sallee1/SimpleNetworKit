@@ -2,379 +2,104 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="src\networkit\graph\Graph.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\GraphBuilder.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\GraphTools.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\KruskalMSF.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\RandomMaximumSpanningForest.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\SpanningForest.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\TopologicalSort.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\graph\UnionMaximumSpanningForest.cpp">
-      <Filter>src\networkit\graph</Filter>
+      <Filter>src\graph</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\auxiliary\Log.cpp">
-      <Filter>src\networkit\auxiliary</Filter>
+      <Filter>src\auxiliary</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\auxiliary\Random.cpp">
-      <Filter>src\networkit\auxiliary</Filter>
+      <Filter>src\auxiliary</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\auxiliary\SignalHandling.cpp">
-      <Filter>src\networkit\auxiliary</Filter>
+      <Filter>src\auxiliary</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\structures\UnionFind.cpp">
-      <Filter>src\networkit\structures</Filter>
+      <Filter>src\structures</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\structures\Partition.cpp">
-      <Filter>src\networkit\structures</Filter>
-    </ClCompile>
-    <ClCompile Include="src\networkit\GlobalState.cpp">
-      <Filter>src\networkit</Filter>
+      <Filter>src\structures</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\centrality\ApproxBetweenness.cpp">
-      <Filter>src\networkit\centrality</Filter>
+      <Filter>src\centrality</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\centrality\Betweenness.cpp">
-      <Filter>src\networkit\centrality</Filter>
+      <Filter>src\centrality</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\centrality\Centrality.cpp">
-      <Filter>src\networkit\centrality</Filter>
+      <Filter>src\centrality</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\centrality\DegreeCentrality.cpp">
-      <Filter>src\networkit\centrality</Filter>
+      <Filter>src\centrality</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\centrality\DynApproxBetweenness.cpp">
-      <Filter>src\networkit\centrality</Filter>
+      <Filter>src\centrality</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\centrality\DynBetweenness.cpp">
-      <Filter>src\networkit\centrality</Filter>
+      <Filter>src\centrality</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\BFS.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\Diameter.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\Dijkstra.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\SSSP.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\components\ConnectedComponents.cpp">
-      <Filter>src\networkit\components</Filter>
+      <Filter>src\components</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\DynBFS.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\DynSSSP.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\auxiliary\NumericTools.cpp">
-      <Filter>src\networkit\auxiliary</Filter>
+      <Filter>src\auxiliary</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\DynDijkstra.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\distance\Eccentricity.cpp">
-      <Filter>src\networkit\distance</Filter>
+      <Filter>src\distance</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\components\ComponentDecomposition.cpp">
-      <Filter>src\networkit\components</Filter>
+      <Filter>src\components</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\components\ConnectedComponentsImpl.cpp">
-      <Filter>src\networkit\components</Filter>
+      <Filter>src\components</Filter>
     </ClCompile>
     <ClCompile Include="src\networkit\components\StronglyConnectedComponents.cpp">
-      <Filter>src\networkit\components</Filter>
+      <Filter>src\components</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\networkit\graph\BFS.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\DFS.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\Dijkstra.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\Graph.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\GraphBuilder.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\GraphTools.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\KruskalMSF.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\RandomMaximumSpanningForest.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\SpanningForest.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\TopologicalSort.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\graph\UnionMaximumSpanningForest.hpp">
-      <Filter>src\networkit\graph</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\ArrayTools.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\FunctionTraits.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\Log.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\Random.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\StringBuilder.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\TemplateUtils.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\deprecated.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\abs_diff.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\aggregate.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\aggregate_min_max.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\bswap.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\bswap_be.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\bswap_le.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\clz.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\ctz.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\div_ceil.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\ffs.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\integer_log2.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\is_power_of_two.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\polynomial_regression.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\popcount.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\power_to_the.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\rol.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\ror.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\round_to_power_of_two.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\round_up.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\math\sgn.hpp">
-      <Filter>src\tlx\math</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\attribute_always_inline.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\attribute_fallthrough.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\attribute_format_printf.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\attribute_packed.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\attribute_warn_unused_result.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\constexpr.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\endian.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\likely.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\define\visibility_hidden.hpp">
-      <Filter>src\tlx\define</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\unused.hpp">
-      <Filter>src\tlx</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\GlobalState.hpp">
-      <Filter>src\networkit</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\Parallel.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\SignalHandling.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\base\Algorithm.hpp">
-      <Filter>src\networkit\base</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\base\DynAlgorithm.hpp">
-      <Filter>src\networkit\base</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\structures\UnionFind.hpp">
-      <Filter>src\networkit\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\structures\Partition.hpp">
-      <Filter>src\networkit\structures</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\centrality\ApproxBetweenness.hpp">
-      <Filter>src\networkit\centrality</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\centrality\Betweenness.hpp">
-      <Filter>src\networkit\centrality</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\centrality\Centrality.hpp">
-      <Filter>src\networkit\centrality</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\centrality\DegreeCentrality.hpp">
-      <Filter>src\networkit\centrality</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\centrality\DynApproxBetweenness.hpp">
-      <Filter>src\networkit\centrality</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\centrality\DynBetweenness.hpp">
-      <Filter>src\networkit\centrality</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\BFS.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\Diameter.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\Dijkstra.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\SSSP.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\components\ConnectedComponents.hpp">
-      <Filter>src\networkit\components</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmath.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathbig.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathdec.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathint.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathmisc.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathobjects.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathparser.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmaththreads.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathtypes.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathuint.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathuint_noasm.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathuint_x86.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ttmath\ttmathuint_x86_64.h">
-      <Filter>src\ttmath</Filter>
-    </ClInclude>
-    <ClInclude Include="src\tlx\container\d_ary_addressable_int_heap.hpp">
-      <Filter>src\tlx\container</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\DynBFS.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\DynSSSP.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\Multiprecision.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\NumericTools.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\PrioQueue.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\auxiliary\VectorComparator.hpp">
-      <Filter>src\networkit\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\DynDijkstra.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\distance\Eccentricity.hpp">
-      <Filter>src\networkit\distance</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\components\ComponentDecomposition.hpp">
-      <Filter>src\networkit\components</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\components\ConnectedComponentsImpl.hpp">
-      <Filter>src\networkit\components</Filter>
-    </ClInclude>
-    <ClInclude Include="src\networkit\components\StronglyConnectedComponents.hpp">
-      <Filter>src\networkit\components</Filter>
-    </ClInclude>
+    <ClCompile Include="src\networkit\GlobalState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -383,52 +108,196 @@
     <Filter Include="include">
       <UniqueIdentifier>{4fe751f9-92b5-424c-9b26-4dfc3d971508}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\networkit">
-      <UniqueIdentifier>{73d1492f-6c27-442d-ae53-09d667290afa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\networkit\graph">
-      <UniqueIdentifier>{516ef108-bf76-4589-be85-d06b2b1a43a7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\networkit\auxiliary">
+    <Filter Include="src\auxiliary">
       <UniqueIdentifier>{358a8eda-4c72-4f99-a31b-74c1a6da8295}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\tlx">
-      <UniqueIdentifier>{4fafc33c-73e2-4d57-a6ab-fe8a281a8c9e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\tlx\define">
-      <UniqueIdentifier>{c4f0ca76-c32a-42fe-aaf8-7677b4f5e9c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\tlx\math">
-      <UniqueIdentifier>{b97be6ac-edbd-4a88-a0bc-fdf5b593ae09}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\networkit\base">
+    <Filter Include="src\base">
       <UniqueIdentifier>{3f6ead57-6afa-4d34-b488-d5186d8785f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\networkit\structures">
-      <UniqueIdentifier>{20895de6-86ca-4202-8d44-8691e8d159e1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\networkit\centrality">
+    <Filter Include="src\centrality">
       <UniqueIdentifier>{a7c43274-3b26-43ea-a515-d7d4a5a57e97}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\networkit\distance">
-      <UniqueIdentifier>{2e1c6c2e-f2e7-4671-8d6a-043992af2d7e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\networkit\components">
+    <Filter Include="src\components">
       <UniqueIdentifier>{a70b1388-784b-43c8-9321-98e12ef2ed2f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\networkit\dynamics">
+    <Filter Include="src\distance">
+      <UniqueIdentifier>{2e1c6c2e-f2e7-4671-8d6a-043992af2d7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dynamics">
       <UniqueIdentifier>{9fa154ae-79e1-4e20-bf20-4e74d73c4c87}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\ttmath">
-      <UniqueIdentifier>{f6473bc0-d008-4411-90b8-c7cd95a84fc2}</UniqueIdentifier>
+    <Filter Include="src\graph">
+      <UniqueIdentifier>{516ef108-bf76-4589-be85-d06b2b1a43a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\tlx\container">
-      <UniqueIdentifier>{aefe23e0-4786-4403-8084-8c9ac86543cb}</UniqueIdentifier>
+    <Filter Include="src\structures">
+      <UniqueIdentifier>{20895de6-86ca-4202-8d44-8691e8d159e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\auxiliary">
+      <UniqueIdentifier>{10011ab8-8750-43e7-b3e1-8a2095cb1603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\base">
+      <UniqueIdentifier>{a05f0923-4f45-4077-889f-9586a263ae64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\centrality">
+      <UniqueIdentifier>{e477e327-2194-459f-a98a-77cfadefa23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\components">
+      <UniqueIdentifier>{4d90946a-40c3-4d7a-a910-c1ad7b8bd13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\distance">
+      <UniqueIdentifier>{cce534d0-d821-48d5-8fd2-4cac41e26d25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\dyanmics">
+      <UniqueIdentifier>{85344fc0-eeb7-42e9-a3bd-8e03e0b103da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\graph">
+      <UniqueIdentifier>{0826d5ec-bf7f-4c74-aa6d-9b12c2ce0a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\structures">
+      <UniqueIdentifier>{d96db738-e459-4287-88e4-a7d5d4d5ee05}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\ttmath\ttmathuint_x86_64_msvc.asm">
-      <Filter>src\ttmath</Filter>
-    </None>
+    <ClInclude Include="include\networkit\auxiliary\ArrayTools.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\FunctionTraits.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\Log.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\Multiprecision.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\NumericTools.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\Parallel.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\PrioQueue.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\Random.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\SignalHandling.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\StringBuilder.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\TemplateUtils.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\VectorComparator.hpp">
+      <Filter>include\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\base\Algorithm.hpp">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\base\DynAlgorithm.hpp">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\ApproxBetweenness.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\Betweenness.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\Centrality.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\DegreeCentrality.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\DynApproxBetweenness.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\DynBetweenness.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\components\ComponentDecomposition.hpp">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\components\ConnectedComponents.hpp">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\components\StronglyConnectedComponents.hpp">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\BFS.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\Diameter.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\Dijkstra.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\DynBFS.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\DynDijkstra.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\DynSSSP.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\Eccentricity.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\distance\SSSP.hpp">
+      <Filter>include\distance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\dynamics\GraphEvent.hpp">
+      <Filter>include\dyanmics</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\BFS.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\DFS.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\Dijkstra.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\Graph.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\GraphBuilder.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\GraphTools.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\KruskalMSF.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\RandomMaximumSpanningForest.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\SpanningForest.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\TopologicalSort.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\UnionMaximumSpanningForest.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\structures\Partition.hpp">
+      <Filter>include\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\structures\UnionFind.hpp">
+      <Filter>include\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\Globals.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\GlobalState.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

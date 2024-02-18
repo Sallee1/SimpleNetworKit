@@ -54,102 +54,53 @@
     <ClCompile Include="src\networkit\structures\UnionFind.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\networkit\auxiliary\ArrayTools.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\FunctionTraits.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\Log.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\Multiprecision.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\NumericTools.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\Parallel.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\PrioQueue.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\Random.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\SignalHandling.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\StringBuilder.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\TemplateUtils.hpp" />
-    <ClInclude Include="src\networkit\auxiliary\VectorComparator.hpp" />
-    <ClInclude Include="src\networkit\base\Algorithm.hpp" />
-    <ClInclude Include="src\networkit\base\DynAlgorithm.hpp" />
-    <ClInclude Include="src\networkit\centrality\ApproxBetweenness.hpp" />
-    <ClInclude Include="src\networkit\centrality\Betweenness.hpp" />
-    <ClInclude Include="src\networkit\centrality\Centrality.hpp" />
-    <ClInclude Include="src\networkit\centrality\DegreeCentrality.hpp" />
-    <ClInclude Include="src\networkit\centrality\DynApproxBetweenness.hpp" />
-    <ClInclude Include="src\networkit\centrality\DynBetweenness.hpp" />
-    <ClInclude Include="src\networkit\components\ComponentDecomposition.hpp" />
-    <ClInclude Include="src\networkit\components\ConnectedComponents.hpp" />
-    <ClInclude Include="src\networkit\components\ConnectedComponentsImpl.hpp" />
-    <ClInclude Include="src\networkit\components\StronglyConnectedComponents.hpp" />
-    <ClInclude Include="src\networkit\distance\BFS.hpp" />
-    <ClInclude Include="src\networkit\distance\Diameter.hpp" />
-    <ClInclude Include="src\networkit\distance\Dijkstra.hpp" />
-    <ClInclude Include="src\networkit\distance\DynBFS.hpp" />
-    <ClInclude Include="src\networkit\distance\DynDijkstra.hpp" />
-    <ClInclude Include="src\networkit\distance\DynSSSP.hpp" />
-    <ClInclude Include="src\networkit\distance\Eccentricity.hpp" />
-    <ClInclude Include="src\networkit\distance\SSSP.hpp" />
-    <ClInclude Include="src\networkit\GlobalState.hpp" />
-    <ClInclude Include="src\networkit\graph\BFS.hpp" />
-    <ClInclude Include="src\networkit\graph\DFS.hpp" />
-    <ClInclude Include="src\networkit\graph\Dijkstra.hpp" />
-    <ClInclude Include="src\networkit\graph\Graph.hpp" />
-    <ClInclude Include="src\networkit\graph\GraphBuilder.hpp" />
-    <ClInclude Include="src\networkit\graph\GraphTools.hpp" />
-    <ClInclude Include="src\networkit\graph\KruskalMSF.hpp" />
-    <ClInclude Include="src\networkit\graph\RandomMaximumSpanningForest.hpp" />
-    <ClInclude Include="src\networkit\graph\SpanningForest.hpp" />
-    <ClInclude Include="src\networkit\graph\TopologicalSort.hpp" />
-    <ClInclude Include="src\networkit\graph\UnionMaximumSpanningForest.hpp" />
-    <ClInclude Include="src\networkit\structures\Partition.hpp" />
-    <ClInclude Include="src\networkit\structures\UnionFind.hpp" />
-    <ClInclude Include="src\tlx\container\d_ary_addressable_int_heap.hpp" />
-    <ClInclude Include="src\tlx\define\attribute_always_inline.hpp" />
-    <ClInclude Include="src\tlx\define\attribute_fallthrough.hpp" />
-    <ClInclude Include="src\tlx\define\attribute_format_printf.hpp" />
-    <ClInclude Include="src\tlx\define\attribute_packed.hpp" />
-    <ClInclude Include="src\tlx\define\attribute_warn_unused_result.hpp" />
-    <ClInclude Include="src\tlx\define\constexpr.hpp" />
-    <ClInclude Include="src\tlx\define\deprecated.hpp" />
-    <ClInclude Include="src\tlx\define\endian.hpp" />
-    <ClInclude Include="src\tlx\define\likely.hpp" />
-    <ClInclude Include="src\tlx\define\visibility_hidden.hpp" />
-    <ClInclude Include="src\tlx\math\abs_diff.hpp" />
-    <ClInclude Include="src\tlx\math\aggregate.hpp" />
-    <ClInclude Include="src\tlx\math\aggregate_min_max.hpp" />
-    <ClInclude Include="src\tlx\math\bswap.hpp" />
-    <ClInclude Include="src\tlx\math\bswap_be.hpp" />
-    <ClInclude Include="src\tlx\math\bswap_le.hpp" />
-    <ClInclude Include="src\tlx\math\clz.hpp" />
-    <ClInclude Include="src\tlx\math\ctz.hpp" />
-    <ClInclude Include="src\tlx\math\div_ceil.hpp" />
-    <ClInclude Include="src\tlx\math\ffs.hpp" />
-    <ClInclude Include="src\tlx\math\integer_log2.hpp" />
-    <ClInclude Include="src\tlx\math\is_power_of_two.hpp" />
-    <ClInclude Include="src\tlx\math\polynomial_regression.hpp" />
-    <ClInclude Include="src\tlx\math\popcount.hpp" />
-    <ClInclude Include="src\tlx\math\power_to_the.hpp" />
-    <ClInclude Include="src\tlx\math\rol.hpp" />
-    <ClInclude Include="src\tlx\math\ror.hpp" />
-    <ClInclude Include="src\tlx\math\round_to_power_of_two.hpp" />
-    <ClInclude Include="src\tlx\math\round_up.hpp" />
-    <ClInclude Include="src\tlx\math\sgn.hpp" />
-    <ClInclude Include="src\tlx\unused.hpp" />
-    <ClInclude Include="src\ttmath\ttmath.h" />
-    <ClInclude Include="src\ttmath\ttmathbig.h" />
-    <ClInclude Include="src\ttmath\ttmathdec.h" />
-    <ClInclude Include="src\ttmath\ttmathint.h" />
-    <ClInclude Include="src\ttmath\ttmathmisc.h" />
-    <ClInclude Include="src\ttmath\ttmathobjects.h" />
-    <ClInclude Include="src\ttmath\ttmathparser.h" />
-    <ClInclude Include="src\ttmath\ttmaththreads.h" />
-    <ClInclude Include="src\ttmath\ttmathtypes.h" />
-    <ClInclude Include="src\ttmath\ttmathuint.h" />
-    <ClInclude Include="src\ttmath\ttmathuint_noasm.h" />
-    <ClInclude Include="src\ttmath\ttmathuint_x86.h" />
-    <ClInclude Include="src\ttmath\ttmathuint_x86_64.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\ttmath\ttmathuint_x86_64_msvc.asm">
-      <FileType>Document</FileType>
-    </None>
+    <ClInclude Include="include\networkit\auxiliary\ArrayTools.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\FunctionTraits.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\Log.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\Multiprecision.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\NumericTools.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\Parallel.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\PrioQueue.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\Random.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\SignalHandling.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\StringBuilder.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\TemplateUtils.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\VectorComparator.hpp" />
+    <ClInclude Include="include\networkit\base\Algorithm.hpp" />
+    <ClInclude Include="include\networkit\base\DynAlgorithm.hpp" />
+    <ClInclude Include="include\networkit\centrality\ApproxBetweenness.hpp" />
+    <ClInclude Include="include\networkit\centrality\Betweenness.hpp" />
+    <ClInclude Include="include\networkit\centrality\Centrality.hpp" />
+    <ClInclude Include="include\networkit\centrality\DegreeCentrality.hpp" />
+    <ClInclude Include="include\networkit\centrality\DynApproxBetweenness.hpp" />
+    <ClInclude Include="include\networkit\centrality\DynBetweenness.hpp" />
+    <ClInclude Include="include\networkit\components\ComponentDecomposition.hpp" />
+    <ClInclude Include="include\networkit\components\ConnectedComponents.hpp" />
+    <ClInclude Include="include\networkit\components\StronglyConnectedComponents.hpp" />
+    <ClInclude Include="include\networkit\distance\BFS.hpp" />
+    <ClInclude Include="include\networkit\distance\Diameter.hpp" />
+    <ClInclude Include="include\networkit\distance\Dijkstra.hpp" />
+    <ClInclude Include="include\networkit\distance\DynBFS.hpp" />
+    <ClInclude Include="include\networkit\distance\DynDijkstra.hpp" />
+    <ClInclude Include="include\networkit\distance\DynSSSP.hpp" />
+    <ClInclude Include="include\networkit\distance\Eccentricity.hpp" />
+    <ClInclude Include="include\networkit\distance\SSSP.hpp" />
+    <ClInclude Include="include\networkit\dynamics\GraphEvent.hpp" />
+    <ClInclude Include="include\networkit\Globals.hpp" />
+    <ClInclude Include="include\networkit\GlobalState.hpp" />
+    <ClInclude Include="include\networkit\graph\BFS.hpp" />
+    <ClInclude Include="include\networkit\graph\DFS.hpp" />
+    <ClInclude Include="include\networkit\graph\Dijkstra.hpp" />
+    <ClInclude Include="include\networkit\graph\Graph.hpp" />
+    <ClInclude Include="include\networkit\graph\GraphBuilder.hpp" />
+    <ClInclude Include="include\networkit\graph\GraphTools.hpp" />
+    <ClInclude Include="include\networkit\graph\KruskalMSF.hpp" />
+    <ClInclude Include="include\networkit\graph\RandomMaximumSpanningForest.hpp" />
+    <ClInclude Include="include\networkit\graph\SpanningForest.hpp" />
+    <ClInclude Include="include\networkit\graph\TopologicalSort.hpp" />
+    <ClInclude Include="include\networkit\graph\UnionMaximumSpanningForest.hpp" />
+    <ClInclude Include="include\networkit\structures\Partition.hpp" />
+    <ClInclude Include="include\networkit\structures\UnionFind.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -206,9 +157,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>SimpleNetworKit</TargetName>
+    <OutDir>$(ProjectDir)\lib\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>SimpleNetworKit</TargetName>
+    <OutDir>$(ProjectDir)\lib\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -250,7 +203,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;LIBSIMPLENETWORKKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(projectDir)src;$(projectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)include;$(projectDir)third_party\tlx\include;$(projectDir)third_party\ttmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
@@ -267,7 +220,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;LIBSIMPLENETWORKKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(projectDir)src;$(projectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)include;$(projectDir)third_party\tlx\include;$(projectDir)third_party\ttmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
