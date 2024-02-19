@@ -1,69 +1,88 @@
 #include "GraphAlgorithmImpl.h"
+#include <networkit/graph/Graph.hpp>
+#include <networkit/graph/GraphTools.hpp>
 
 namespace nk = NetworKit;
 
 namespace graph_object {
-    nk::Graph* create(bool isDirected)
+    nk::Graph* create(bool is_directed, bool is_weighted)
     {
-        return nullptr;
+        nk::Graph* graph = new nk::Graph(0, is_weighted, is_directed);
+        return graph;
     }
 
     nk::Graph* clone(nk::Graph* graph)
     {
-        return nullptr;
+        return new nk::Graph(*graph);
     }
 
-    nk::Graph* subGraph(nk::Graph* graph, int size, int* nodeIds)
+    nk::Graph* subGraph(nk::Graph* graph, uint64_t size, uint64_t* node_ids)
     {
-        return nullptr;
+        std::unordered_set<nk::node> nodes;
+        for (uint64_t i = 0; i < size; i++)
+        {
+            nodes.emplace(nk::node(node_ids[i]));
+        }
+        return new nk::Graph(nk::GraphTools::subgraphFromNodes(*graph, nodes));
     }
 
     bool isDirected(nk::Graph* graph)
     {
-        return false;
+        return graph->isDirected();
     }
 
-    int getNodeCount(nk::Graph* graph)
+    bool isWeighted(nk::Graph* graph)
     {
-        return 0;
+        return graph->isWeighted();
     }
 
-    int getAllNodes(nk::Graph* graph, int* nodeIds)
+    uint64_t getNodeCount(nk::Graph* graph)
     {
-        return 0;
+        return graph->numberOfNodes();
     }
 
-    int getEdgeCount(nk::Graph* graph)
+    uint64_t getAllNodes(nk::Graph* graph, uint64_t* node_ids)
     {
-        return 0;
+        auto node_ids_vec = new std::vector<uint64_t>;
+        for (auto node : graph->nodeRange())
+        {
+            node_ids_vec->push_back(node);
+        }
+        node_ids = node_ids_vec->data();
+        return graph->numberOfNodes();
     }
 
-    int getAllEdges(nk::Graph* graph, int* edgeFrom, int* edgeTo)
+    uint64_t getEdgeCount(nk::Graph* graph)
     {
-        return 0;
+        return graph->numberOfEdges();
     }
 
-    bool setEdgeWidget(nk::Graph* graph, int edgeFrom, int edgeTo, int widget)
+    uint64_t getAllEdges(nk::Graph* graph, uint64_t* edge_from, uint64_t* edge_to)
     {
-        return false;
+        return graph->numberOfEdges();
     }
 
-    bool addNode(nk::Graph* graph, int nodeId)
-    {
-        return false;
-    }
-
-    bool removeNode(nk::Graph* graph, int nodeId)
-    {
-        return false;
-    }
-
-    bool addEdge(nk::Graph* graph, int edgeFrom, int edgeTo)
+    bool setEdgeWidget(nk::Graph* graph, uint64_t edge_from, uint64_t edge_to, float widget)
     {
         return false;
     }
 
-    bool removeEdge(nk::Graph* graph, int edgeFrom, int edgeTo)
+    bool addNode(nk::Graph* graph, uint64_t nodeId)
+    {
+        return false;
+    }
+
+    bool removeNode(nk::Graph* graph, uint64_t nodeId)
+    {
+        return false;
+    }
+
+    bool addEdge(nk::Graph* graph, uint64_t edge_from, uint64_t edge_to)
+    {
+        return false;
+    }
+
+    bool removeEdge(nk::Graph* graph, uint64_t edge_from, uint64_t edge_to)
     {
         return false;
     }
@@ -75,22 +94,22 @@ namespace graph_object {
 }
 
 namespace graph_algorithm {
-    bool getDegree(nk::Graph* graph, int node, int* out_degree)
+    bool getDegree(nk::Graph* graph, uint64_t node, uint64_t* out_degree)
     {
         return false;
     }
 
-    float getBetweenness(nk::Graph* graph, int node, float* out_betweenness)
+    float getBetweenness(nk::Graph* graph, uint64_t node, float* out_betweenness)
     {
         return 0.0f;
     }
 
-    int getKCore(nk::Graph* graph, int node, int* out_KCore)
+    uint64_t getKCore(nk::Graph* graph, uint64_t node, uint64_t* out_KCore)
     {
         return 0;
     }
 
-    bool getDegreeDistribution(nk::Graph* graph, int* out_size, int* out_degree, float out_probability)
+    bool getDegreeDistribution(nk::Graph* graph, uint64_t* out_size, uint64_t* out_degree, float out_probability)
     {
         return false;
     }
