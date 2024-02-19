@@ -100,6 +100,12 @@
     <ClCompile Include="src\networkit\GlobalState.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\networkit\centrality\CoreDecomposition.cpp">
+      <Filter>src\centrality</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networkit\structures\Cover.cpp">
+      <Filter>src\structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -298,6 +304,12 @@
     </ClInclude>
     <ClInclude Include="include\networkit\GlobalState.hpp">
       <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\CoreDecomposition.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\structures\Cover.hpp">
+      <Filter>include\structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
