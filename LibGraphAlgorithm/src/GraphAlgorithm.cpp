@@ -54,9 +54,9 @@ bool graph_setEdgeWidget(pGraph graph, uint64_t edge_from, uint64_t edge_to, flo
     return graph_object::setEdgeWidget(static_cast<nk::Graph*>(graph), edge_from, edge_to, widget);
 }
 
-bool graph_addNode(pGraph graph, uint64_t node_id)
+uint64_t graph_addNode(pGraph graph)
 {
-    return graph_object::addNode(static_cast<nk::Graph*>(graph), node_id);
+    return graph_object::addNode(static_cast<nk::Graph*>(graph));
 }
 
 bool graph_removeNode(pGraph graph, uint64_t node_id)

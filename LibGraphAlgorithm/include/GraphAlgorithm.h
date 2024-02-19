@@ -98,10 +98,9 @@ bool LIBGRAPHALGORITHM_API graph_setEdgeWidget(pGraph graph, uint64_t edge_from,
 
 /**
  * @brief 在图中添加一个新节点
- * @param graph 图对象指针
- * @param node_id 节点id，如果节点已经存在，返回false
+ * @param node_id 节点id
 */
-bool LIBGRAPHALGORITHM_API graph_addNode(pGraph graph, uint64_t node_id);
+uint64_t LIBGRAPHALGORITHM_API graph_addNode(pGraph graph);
 
 /**
  * @brief 在图中删除节点

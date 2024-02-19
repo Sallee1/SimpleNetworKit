@@ -1,6 +1,8 @@
 #include "GraphAlgorithmImpl.h"
 #include <networkit/graph/Graph.hpp>
 #include <networkit/graph/GraphTools.hpp>
+#include <networkit/centrality/Betweenness.hpp>
+#include <networkit/centrality/CoreDecomposition.hpp>
 
 namespace nk = NetworKit;
 
@@ -43,6 +45,7 @@ namespace graph_object {
 
     uint64_t getAllNodes(nk::Graph* graph, uint64_t* node_ids)
     {
+        // TODO: 这里会有内存泄漏的风险
         auto node_ids_vec = new std::vector<uint64_t>;
         for (auto node : graph->nodeRange())
         {
@@ -59,53 +62,83 @@ namespace graph_object {
 
     uint64_t getAllEdges(nk::Graph* graph, uint64_t* edge_from, uint64_t* edge_to)
     {
+        // TODO: 这里会有内存泄漏的风险
+        auto edge_from_vec = new std::vector<uint64_t>;
+        auto edge_to_vec = new std::vector<uint64_t>;
+        for (auto edge : graph->edgeRange())
+        {
+            edge_from_vec->push_back(edge.u);
+            edge_to_vec->push_back(edge.v);
+        }
+        edge_from = edge_from_vec->data();
+        edge_to = edge_to_vec->data();
         return graph->numberOfEdges();
     }
 
     bool setEdgeWidget(nk::Graph* graph, uint64_t edge_from, uint64_t edge_to, float widget)
     {
-        return false;
+        if (!graph->isWeighted()) return false;
+        if (!graph->hasEdge(edge_from, edge_to)) return false;
+        graph->setWeight(edge_from, edge_to, widget);
+        return true;
     }
 
-    bool addNode(nk::Graph* graph, uint64_t nodeId)
+    uint64_t addNode(nk::Graph* graph)
     {
-        return false;
+        return graph->addNode();
     }
 
     bool removeNode(nk::Graph* graph, uint64_t nodeId)
     {
-        return false;
+        if (!graph->hasNode(nodeId))return false;
+        graph->removeNode(nodeId);
+        return true;
     }
 
     bool addEdge(nk::Graph* graph, uint64_t edge_from, uint64_t edge_to)
     {
-        return false;
+        if (graph->hasNode(edge_from) || graph->hasNode(edge_to)) return false;
+        if (graph->hasEdge(edge_from, edge_to))return false;
+        graph->addEdge(edge_from, edge_to);
+        return true;
     }
 
     bool removeEdge(nk::Graph* graph, uint64_t edge_from, uint64_t edge_to)
     {
-        return false;
+        if (!graph->hasEdge(edge_from, edge_to))return false;
+        graph->removeEdge(edge_from, edge_to);
+        return true;
     }
 
     bool destroy(nk::Graph* graph)
     {
-        return false;
+        if (graph == nullptr) return false;
+        delete graph;
+        return true;
     }
 }
 
 namespace graph_algorithm {
     bool getDegree(nk::Graph* graph, uint64_t node, uint64_t* out_degree)
     {
-        return false;
+        if (!graph->hasNode(node)) return false;
+        *out_degree = graph->degree(node);
+        return true;
     }
 
-    float getBetweenness(nk::Graph* graph, uint64_t node, float* out_betweenness)
+    bool getBetweenness(nk::Graph* graph, uint64_t node, float* out_betweenness)
     {
-        return 0.0f;
+        //TODO 介数分布是单独的类，需要重构以减少重复计算
+        if (!graph->hasEdge(node))return false;
+        *out_betweenness = nk::Betweenness(*graph).run().at(node);
+        return true;
     }
 
-    uint64_t getKCore(nk::Graph* graph, uint64_t node, uint64_t* out_KCore)
+    bool getKCore(nk::Graph* graph, uint64_t node, uint64_t* out_KCore)
     {
+        //TODO K-Core分布是单独的类，需要重构以减少重复计算
+        if (!graph->hasNode(node)) return 0;
+        *out_KCore = nk::CoreDecomposition(*graph).kCore(node);
         return 0;
     }
 
@@ -114,8 +147,9 @@ namespace graph_algorithm {
         return false;
     }
 
-    bool getDensity(nk::Graph* graph, float out_density)
+    bool getDensity(nk::Graph* graph, float* out_density)
     {
-        return false;
+        *out_density = static_cast<float>(graph->numberOfEdges()) / (graph->numberOfNodes() * (graph->numberOfNodes() - 1));
+        return true;
     }
 }
