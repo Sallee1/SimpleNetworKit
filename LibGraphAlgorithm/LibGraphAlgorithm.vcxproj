@@ -20,12 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
-    <ClCompile Include="src\GraphAlgorithm.cpp" />
-    <ClCompile Include="src\GraphAlgorithmImpl.cpp" />
+    <ClCompile Include="src\GraphCInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\GraphAlgorithm.h" />
-    <ClInclude Include="src\GraphAlgorithmImpl.h" />
+    <ClInclude Include="src\GraphCInterface.h" />
+    <ClInclude Include="src\IGraphAlgorithmTask.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

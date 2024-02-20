@@ -18,10 +18,7 @@
     <ClCompile Include="src\dllmain.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GraphAlgorithm.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GraphAlgorithmImpl.cpp">
+    <ClCompile Include="src\GraphCInterface.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +26,10 @@
     <ClInclude Include="include\GraphAlgorithm.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="src\GraphAlgorithmImpl.h">
+    <ClInclude Include="src\GraphCInterface.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGraphAlgorithmTask.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
