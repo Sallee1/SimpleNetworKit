@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\networkit\auxiliary\Log.cpp" />
     <ClCompile Include="src\networkit\auxiliary\NumericTools.cpp" />
+    <ClCompile Include="src\networkit\auxiliary\Parallelism.cpp" />
     <ClCompile Include="src\networkit\auxiliary\Random.cpp" />
     <ClCompile Include="src\networkit\auxiliary\SignalHandling.cpp" />
     <ClCompile Include="src\networkit\centrality\ApproxBetweenness.cpp" />
@@ -30,6 +31,7 @@
     <ClCompile Include="src\networkit\centrality\DegreeCentrality.cpp" />
     <ClCompile Include="src\networkit\centrality\DynApproxBetweenness.cpp" />
     <ClCompile Include="src\networkit\centrality\DynBetweenness.cpp" />
+    <ClCompile Include="src\networkit\centrality\EstimateBetweenness.cpp" />
     <ClCompile Include="src\networkit\components\ComponentDecomposition.cpp" />
     <ClCompile Include="src\networkit\components\ConnectedComponents.cpp" />
     <ClCompile Include="src\networkit\components\ConnectedComponentsImpl.cpp" />
@@ -42,6 +44,7 @@
     <ClCompile Include="src\networkit\distance\DynSSSP.cpp" />
     <ClCompile Include="src\networkit\distance\Eccentricity.cpp" />
     <ClCompile Include="src\networkit\distance\SSSP.cpp" />
+    <ClCompile Include="src\networkit\dynamics\GraphEvent.cpp" />
     <ClCompile Include="src\networkit\GlobalState.cpp" />
     <ClCompile Include="src\networkit\graph\Graph.cpp" />
     <ClCompile Include="src\networkit\graph\GraphBuilder.cpp" />
@@ -62,6 +65,7 @@
     <ClInclude Include="include\networkit\auxiliary\Multiprecision.hpp" />
     <ClInclude Include="include\networkit\auxiliary\NumericTools.hpp" />
     <ClInclude Include="include\networkit\auxiliary\Parallel.hpp" />
+    <ClInclude Include="include\networkit\auxiliary\Parallelism.hpp" />
     <ClInclude Include="include\networkit\auxiliary\PrioQueue.hpp" />
     <ClInclude Include="include\networkit\auxiliary\Random.hpp" />
     <ClInclude Include="include\networkit\auxiliary\SignalHandling.hpp" />
@@ -77,6 +81,7 @@
     <ClInclude Include="include\networkit\centrality\DegreeCentrality.hpp" />
     <ClInclude Include="include\networkit\centrality\DynApproxBetweenness.hpp" />
     <ClInclude Include="include\networkit\centrality\DynBetweenness.hpp" />
+    <ClInclude Include="include\networkit\centrality\EstimateBetweenness.hpp" />
     <ClInclude Include="include\networkit\components\ComponentDecomposition.hpp" />
     <ClInclude Include="include\networkit\components\ConnectedComponents.hpp" />
     <ClInclude Include="include\networkit\components\StronglyConnectedComponents.hpp" />
@@ -160,11 +165,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>SimpleNetworKit</TargetName>
+    <TargetName>NetworKit</TargetName>
     <OutDir>$(ProjectDir)\lib\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>SimpleNetworKit</TargetName>
+    <TargetName>NetworKit</TargetName>
     <OutDir>$(ProjectDir)\lib\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -207,7 +212,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;LIBSIMPLENETWORKKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(projectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)include;$(projectDir)extra_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
@@ -224,7 +229,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;LIBSIMPLENETWORKKIT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(projectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)include;$(projectDir)extra_include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>

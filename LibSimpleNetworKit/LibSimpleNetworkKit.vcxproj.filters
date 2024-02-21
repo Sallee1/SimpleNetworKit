@@ -4,9 +4,6 @@
     <ClCompile Include="src\networkit\graph\Graph.cpp">
       <Filter>src\graph</Filter>
     </ClCompile>
-    <ClCompile Include="src\networkit\graph\GraphBuilder.cpp">
-      <Filter>src\graph</Filter>
-    </ClCompile>
     <ClCompile Include="src\networkit\graph\GraphTools.cpp">
       <Filter>src\graph</Filter>
     </ClCompile>
@@ -105,6 +102,18 @@
     </ClCompile>
     <ClCompile Include="src\networkit\structures\Cover.cpp">
       <Filter>src\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networkit\graph\GraphBuilder.cpp">
+      <Filter>src\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networkit\dynamics\GraphEvent.cpp">
+      <Filter>src\dynamics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networkit\centrality\EstimateBetweenness.cpp">
+      <Filter>src\centrality</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networkit\auxiliary\Parallelism.cpp">
+      <Filter>src\auxiliary</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -272,9 +281,6 @@
     <ClInclude Include="include\networkit\graph\Graph.hpp">
       <Filter>include\graph</Filter>
     </ClInclude>
-    <ClInclude Include="include\networkit\graph\GraphBuilder.hpp">
-      <Filter>include\graph</Filter>
-    </ClInclude>
     <ClInclude Include="include\networkit\graph\GraphTools.hpp">
       <Filter>include\graph</Filter>
     </ClInclude>
@@ -310,6 +316,15 @@
     </ClInclude>
     <ClInclude Include="include\networkit\structures\Cover.hpp">
       <Filter>include\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\graph\GraphBuilder.hpp">
+      <Filter>include\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\centrality\EstimateBetweenness.hpp">
+      <Filter>include\centrality</Filter>
+    </ClInclude>
+    <ClInclude Include="include\networkit\auxiliary\Parallelism.hpp">
+      <Filter>include\auxiliary</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
