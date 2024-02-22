@@ -7,6 +7,7 @@
 #include <networkit/centrality/CoreDecomposition.hpp>
 #include <networkit/generators/BarabasiAlbertGenerator.hpp>
 #include <networkit/generators/ErdosRenyiGenerator.hpp>
+#include <networkit/generators/WattsStrogatzGenerator.hpp>
 #include <networkit/graph/Graph.hpp>
 #include <networkit/graph/GraphTools.hpp>
 
@@ -47,6 +48,19 @@ auto test_getBAGraph(uint64_t k, uint64_t n)
     printf("==========无标度网络生成测试结束==========\n\n");
     return graph;
 }
+
+auto test_getWSGraph(uint64_t n, uint64_t neighboors, float p)
+{
+    RUN_INIT;
+    printf("==========小世界网络生成测试开始==========\n");
+    printf("随机生成WS小世界网络，n = %llu, neighboors = %llu, p = %lf\n", n, neighboors, p);
+    RUN_BEGIN;
+    auto graph = nk::WattsStrogatzGenerator(n, neighboors,p).generate();
+    RUN_END;
+    printf("==========小世界网络生成测试结束==========\n\n");
+    return graph;
+}
+
 
 void test_getDegree(const nk::Graph& graph, const std::vector<uint64_t>& test_sample)
 {
@@ -224,7 +238,7 @@ void test_degreeDistribution(const nk::Graph& graph)
     RUN_END;
 
     //绘制直方图，将度分布均分为blocks_count份
-    uint64_t blocks_count = 15;
+    uint64_t blocks_count = 50;
     std::vector<float> histogram(blocks_count, 0);
     for (uint64_t i = 0; i < blocks_count; i++)
     {
@@ -268,10 +282,12 @@ int main()
     system("chcp 65001");
     //测试随机生成ER随机网络
     //auto graph = test_getERGraph(2000, 0.25f);
+    
+    //测试随机生成WS小世界网络
+    auto graph = test_getWSGraph(2000,250,1);
 
     //测试随机生成BA无标度网络
-    auto graph = test_getBAGraph(250, 2000);
-
+    //auto graph = test_getBAGraph(250, 2000);
     //获取n个随机数
     uint64_t n = 10;
     std::vector<uint64_t> test_sample(n);

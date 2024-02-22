@@ -33,6 +33,12 @@
     <ClCompile Include="extra_include\networkit\generators\ErdosRenyiGenerator.cpp">
       <Filter>extra_include\networkit\generators</Filter>
     </ClCompile>
+    <ClCompile Include="extra_include\networkit\generators\RegularRingLatticeGenerator.cpp">
+      <Filter>extra_include\networkit\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="extra_include\networkit\generators\WattsStrogatzGenerator.cpp">
+      <Filter>extra_include\networkit\generators</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="extra_include\networkit\generators\BarabasiAlbertGenerator.hpp">
@@ -45,6 +51,12 @@
       <Filter>extra_include\networkit\generators</Filter>
     </ClInclude>
     <ClInclude Include="extra_include\networkit\generators\ErdosRenyiGenerator.hpp">
+      <Filter>extra_include\networkit\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="extra_include\networkit\generators\RegularRingLatticeGenerator.hpp">
+      <Filter>extra_include\networkit\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="extra_include\networkit\generators\WattsStrogatzGenerator.hpp">
       <Filter>extra_include\networkit\generators</Filter>
     </ClInclude>
   </ItemGroup>

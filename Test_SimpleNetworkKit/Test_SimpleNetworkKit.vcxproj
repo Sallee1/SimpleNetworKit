@@ -137,13 +137,17 @@
   <ItemGroup>
     <ClCompile Include="extra_include\networkit\generators\BarabasiAlbertGenerator.cpp" />
     <ClCompile Include="extra_include\networkit\generators\ErdosRenyiGenerator.cpp" />
+    <ClCompile Include="extra_include\networkit\generators\RegularRingLatticeGenerator.cpp" />
+    <ClCompile Include="extra_include\networkit\generators\WattsStrogatzGenerator.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="extra_include\networkit\generators\BarabasiAlbertGenerator.hpp" />
     <ClInclude Include="extra_include\networkit\generators\ErdosRenyiEnumerator.hpp" />
     <ClInclude Include="extra_include\networkit\generators\ErdosRenyiGenerator.hpp" />
+    <ClInclude Include="extra_include\networkit\generators\RegularRingLatticeGenerator.hpp" />
     <ClInclude Include="extra_include\networkit\generators\StaticGraphGenerator.hpp" />
+    <ClInclude Include="extra_include\networkit\generators\WattsStrogatzGenerator.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
