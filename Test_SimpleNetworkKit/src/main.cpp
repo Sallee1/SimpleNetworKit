@@ -55,7 +55,7 @@ auto test_getWSGraph(uint64_t n, uint64_t neighboors, float p)
     printf("==========小世界网络生成测试开始==========\n");
     printf("随机生成WS小世界网络，n = %llu, neighboors = %llu, p = %lf\n", n, neighboors, p);
     RUN_BEGIN;
-    auto graph = nk::WattsStrogatzGenerator(n, neighboors,p).generate();
+    auto graph = nk::WattsStrogatzGenerator(n, neighboors, p).generate();
     RUN_END;
     printf("==========小世界网络生成测试结束==========\n\n");
     return graph;
@@ -281,13 +281,13 @@ int main()
 {
     system("chcp 65001");
     //测试随机生成ER随机网络
-    //auto graph = test_getERGraph(2000, 0.25f);
-    
+    //auto graph = test_getERGraph(2000, 0.05f);
+
     //测试随机生成WS小世界网络
-    auto graph = test_getWSGraph(2000,250,1);
+    //auto graph = test_getWSGraph(2000,250,1);
 
     //测试随机生成BA无标度网络
-    //auto graph = test_getBAGraph(250, 2000);
+    auto graph = test_getBAGraph(250, 2000);
     //获取n个随机数
     uint64_t n = 10;
     std::vector<uint64_t> test_sample(n);
@@ -296,11 +296,11 @@ int main()
         test_sample[i] = Aux::Random::integer(0, graph.numberOfNodes() - 1);
     }
     //测试获取度数
-    test_getDegree(graph, test_sample);
-    //测试获取介值中心度
-    test_getBetweeness(graph, test_sample);
-    //测试快速近似介数中心度算法
-    test_getEstimateBetweeness(graph, test_sample);
+    //test_getDegree(graph, test_sample);
+    ////测试获取介值中心度
+    //test_getBetweeness(graph, test_sample);
+    ////测试快速近似介数中心度算法
+    //test_getEstimateBetweeness(graph, test_sample);
 
     //测试k核值
     test_getKCore(graph, test_sample);
